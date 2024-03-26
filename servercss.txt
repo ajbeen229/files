@@ -1,103 +1,31 @@
-/*
- * Reference - https://codepen.io/supah/pen/WwrJpw
- */
-
-/* basic */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-html,
-body {
-  height: 100%;
-}
-body {
-  font: 16px/1.2 "Roboto", sans-serif;
-  color: #333;
-}
-a {
-  display: inline-block;
-  color: #333;
-  text-decoration: none;
-}
-.blog {
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+.styled-table {
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	font-family: sans-serif;
+	min-width: 400px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-/* container */
-.container {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  overflow: hidden;
+.styled-table thead tr {
+	background-color: #009879;
+	color: #ffffff;
+	text-align: left;
 }
 
-/* leaderboard */
-.leaderboard {
-  background: linear-gradient(to bottom, #3a404d, #181c26);
+.styled-table th,
+.styled-table td {
+	padding: 12px 15px;
 }
 
-/* head */
-.leaderboard .head {
-  padding: 20px 16px;
-  color: snow;
-  font-size: 20px;
-  text-align: center;
-}
-.leaderboard .head h1 {
-  display: inline-block;
-  margin-left: 4px;
+.styled-table tbody tr {
+	border-bottom: 1px solid #dddddd;
 }
 
-/* body */
-.leaderboard .body {
-  color: snow;
-  font-size: 16px;
+.styled-table tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3;
 }
-.leaderboard ol {
-  counter-reset: number; /* 定義和初始化計數器 */
-}
-.leaderboard li {
-  padding: 16px;
-  display: flex;
-}
-.leaderboard li mark {
-  flex-grow: 1;
-  color: snow;
-  background-color: transparent;
-}
-.leaderboard li:before {
-  counter-increment: number; /* 遞增計數器 */
-  content: counter(number) "."; /* 顯示計數器 */
-  margin-right: 4px;
-}
-.leaderboard li:nth-child(1) {
-  background: #fa6855;
-}
-.leaderboard li:nth-child(2) {
-  background: #e0574f;
-}
-.leaderboard li:nth-child(3) {
-  background: #d7514d;
-}
-.leaderboard li:nth-child(4) {
-  background: #cd4b4b;
-}
-.leaderboard li:nth-child(5) {
-  background: #c24448;
+
+.styled-table tbody tr:last-of-type {
+	border-bottom: 2px solid #009879;
 }
